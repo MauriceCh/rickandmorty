@@ -10,9 +10,7 @@ import header from './assets/img/a969db2fa066e5066401bbfb6151f784.jpg';
 function App() {
   const [rickLocation, setRickLocation] = useState({});
   const [typeLoc, setTypeLoc] = useState("");
-  const [page, setPage] = useState(1)
-  const [perPage, setPerPage] = useState(9)
-  const maxPage = rickLocation.length / perPage;
+
 
   document.body.style.backgroundColor = "black";
   useEffect(() => {
@@ -34,7 +32,7 @@ function App() {
       </div>
 
       <h1>{rickLocation.name}</h1>
-      <h2>Type: {rickLocation.type}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Dimension: {rickLocation.dimension}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Population: {rickLocation.residents.length}</h2>
+      <h2>Type: {rickLocation.type}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Dimension: {rickLocation.dimension}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Population: {rickLocation.residents?.length}</h2>
        <input
         type="text"
         value={typeLoc}
